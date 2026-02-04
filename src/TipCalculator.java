@@ -1,13 +1,20 @@
 import java.util.Scanner;
-public class tipCalculator {
+class tipCalculator {
 
     public static double calculateTax(double taxRate){
      return  taxRate/100;
 
     }
-    public static double calculateTip(double rawBill)
+    public static double calculateTip(double rawBill, double tipRate){
+        return rawBill * (tipRate/100);
+    }
 
-
+    public static double calculateTotalBill(double rawBill, double taxAmount,double tipAmount){
+        return rawBill + taxAmount + tipAmount;
+    }
+    public static long calculateRoundedTotalBill(double totalBill){
+        return Math.round(totalBill);
+    }
 
  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
@@ -22,7 +29,8 @@ public class tipCalculator {
      double tipRate = Double.parseDouble(scanner.nextLine());
 
 
-
+     //Object calculateRoundedTotalBill = null;
+     //System.out.println(Long calculateRoundedTotalBill);
 
 
 }
